@@ -50,30 +50,30 @@ int main()
  
   gettimeofday(&tv1, &tz);
  
-    for (j=0;j<n;j++) { 
-      for(i=0;i<m;i++) {
-	A[i][j]= (double) (i+1);
+    for (i=0;i<m;i++) {
+      for (j=0;j<n;j++) {
+        A[i][j]= (double) (i+1);
       }
     } 
-    for ( j=0;j<m;j++) { 
-      for ( i=0;i<n;i++) {
-	if (i==j) 
-	  B[i][j] =(double) 1;
-	else
-	  B[i][j] =(double) 0;       
+    for (i=0;i<n;i++) {
+      for (j=0;j<m;j++) {
+        if (i==j) 
+          B[i][j] =(double) 1;
+        else
+          B[i][j] =(double) 0;       
       }
     }
-    for (j=0;j<m;j++) {
-      for (i=0;i<m;i++) {
-	C[i][j] =(double) 0;
+    for (i=0;i<m;i++) {
+      for (j=0;j<m;j++) {
+        C[i][j] =(double) 0;
       }
     }
 /* Produit de matrices */
-    for (j=0;j<m;j++) {
+    for (i=0;i<m;i++) {
       for (k=0;k<n;k++) {
-	for (i=0;i<m;i++) {
-	  C[i][j] =C[i][j] + A[i][k]*B[k][j];
-	}
+        for (j=0;j<m;j++) {
+          C[i][j] =C[i][j] + A[i][k]*B[k][j];
+        }
       }
     }
 /* Temps final */
