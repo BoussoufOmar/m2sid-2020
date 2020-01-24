@@ -1,6 +1,6 @@
 # Makefile 
 
-OPTOMP =  # option de compilation openmp
+OPTOMP =  -fopenmp
 OPTSEQ = 
 EXELIST = prodmat prodmatseq
 CC = gcc
