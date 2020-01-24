@@ -1,6 +1,6 @@
 # Makefile 
 
-OPTOMP = # a renseigner 
+OPTOMP = -fopenmp# a renseigner 
 OPTSEQ = 
 EXELIST = integcos integcosseq
 CC = gcc
