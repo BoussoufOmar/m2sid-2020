@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     printf("Enter n \n");
     scanf("%d", &n);
   }
-  f=fib_req(n);
+  f=fib_rec(n);
   printf("n %d fibonacci de n %d \n",n,f);
   return 0;
 }
